@@ -1,0 +1,66 @@
+
+$blue-color: #bec7d8;
+$title-color: #5f4333;
+$hover-color: #9c7961;
+
+@mixin flex-box() {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.cards-block {
+    @include flex-box();
+    .char-box {
+    background-color:rgba($color: #ffffff, $alpha: 0.7);
+    border-radius: 5px;
+    width: 30%;
+    height: 400px;
+    margin: 16px;
+    width: 300px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: background-color 0.5s;
+    @include flex-box();
+    &:hover {
+        background-color: #ffffff;
+    }
+        h2 {
+            align-content: center;
+            width: 100%;
+            margin-top: 0;
+            background-color: $blue-color;
+            color: $title-color;
+            border-radius: 5px 5px 0 0;
+            padding: 10px;
+            text-transform: uppercase;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 2px 3px rgba(0,0,0,0.22);
+        }
+        .p-line {
+            align-content: center;
+            width: 100%;
+            @include flex-box();
+            &:nth-child(even) {
+                background: #CCC
+            }
+            &:last-child {
+                border-radius: 0 0 5px 5px;
+            }
+            &:hover {
+                background-color: $hover-color;
+                color: #ffffff;
+                cursor: pointer;
+            }
+            p {
+                text-align: left;
+                width: 40%;
+                padding: 10px;
+                margin: 0;
+                text-transform: capitalize;
+            }
+        }
+        
+        
+    }
+}

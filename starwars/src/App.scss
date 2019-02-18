@@ -1,8 +1,18 @@
+body {
+  background-attachment: fixed;
+}
+
 .App {
   text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 100px;
+
 }
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
+  font-size: 40px;
+  
 }
 /* write your parent styles in here for your App.js */
